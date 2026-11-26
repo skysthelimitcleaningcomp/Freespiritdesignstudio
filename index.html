@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Spirit Design Studio | Alterations & Custom Costumes</title>
-<meta name="description" content="Free Spirit Design Studio offers expert alterations, handcrafted keepsakes and custom costuming for dance and theater.">
+<title>Free Spirit Design Studio | Custom Alterations & Costuming</title>
+<meta name="description" content="Free Spirit Design Studio offers expert alterations, handcrafted keepsakes, and custom costumes for dance and theater.">
 
 <style>
 :root {
@@ -26,7 +26,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 100px;
 }
 
 body {
@@ -51,14 +51,14 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(250,245,236,.98);
+  background: var(--cream);
   box-shadow: 0 3px 15px rgba(0,0,0,.08);
 }
 
 .nav-container {
   max-width: 1250px;
   margin: auto;
-  padding: 10px 5%;
+  padding: 12px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,8 +71,8 @@ header {
 }
 
 .brand img {
-  width: 70px;
-  height: 70px;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
 }
 
@@ -86,7 +86,7 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 24px;
 }
 
 nav a {
@@ -99,83 +99,64 @@ nav a:hover {
   color: var(--teal);
 }
 
-/* HERO - FULL BANNER */
+/* MAIN BANNER */
 
-.hero {
-  position: relative;
-  min-height: 680px;
-  background-image:
-    linear-gradient(
-      rgba(20,15,12,.15),
-      rgba(20,15,12,.25)
-    ),
-    url("Messenger_creation_40139868-354A-421B-B655-E9F9D3C932FE.jpeg");
-
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 65px 20px;
-}
-
-.hero-content {
+.hero-banner {
   width: 100%;
-  max-width: 750px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #e9dfd3;
+}
 
-  background: rgba(250,245,236,.48);
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
 
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+/* INTRODUCTION */
 
-  border: 1px solid rgba(255,255,255,.45);
-  border-radius: 14px;
-
-  padding: 30px 35px;
+.intro {
   text-align: center;
-
-  box-shadow: 0 10px 35px rgba(0,0,0,.12);
+  padding: 65px 20px 75px;
+  background: var(--cream);
 }
 
-.hero-logo {
-  width: 105px;
-  height: 105px;
-  object-fit: contain;
-  margin: 0 auto 8px;
-}
-
-.hero h1 {
+.intro h1 {
   color: var(--brown);
-  font-size: clamp(42px,7vw,65px);
-  line-height: 1.15;
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.2;
 }
 
-.hero h2 {
+.intro h2 {
   color: var(--teal);
-  font-size: 19px;
+  font-size: 17px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  margin: 8px 0 20px;
+  margin-top: 12px;
 }
 
-.hero p {
-  font-size: 19px;
-  max-width: 590px;
+.divider {
+  width: 80px;
+  height: 3px;
+  background: var(--gold);
+  margin: 20px auto;
+}
+
+.intro p {
+  max-width: 700px;
   margin: auto;
-  color: #302c29;
-  font-weight: 500;
+  font-size: 19px;
 }
 
 .button {
   display: inline-block;
   margin-top: 25px;
-  padding: 13px 30px;
+  padding: 13px 32px;
   border-radius: 35px;
   background: var(--teal);
   color: white;
-  font-size: 16px;
   transition: .25s;
 }
 
@@ -184,20 +165,20 @@ nav a:hover {
   transform: translateY(-3px);
 }
 
-/* GENERAL SECTIONS */
+/* SECTIONS */
 
-section {
-  padding: 80px 6%;
+section.content-section {
+  padding: 75px 6%;
 }
 
 .section-title {
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
 
 .section-title h2 {
   color: var(--brown);
-  font-size: clamp(30px,5vw,40px);
+  font-size: clamp(30px, 5vw, 40px);
 }
 
 .section-title p {
@@ -205,22 +186,15 @@ section {
   margin-top: 8px;
 }
 
-.divider {
-  width: 80px;
-  height: 3px;
-  background: var(--gold);
-  margin: 16px auto;
-}
-
 /* ABOUT */
 
-.about-container {
+.about {
   max-width: 900px;
   margin: auto;
   text-align: center;
 }
 
-.about-container p {
+.about p {
   font-size: 18px;
   margin-bottom: 17px;
 }
@@ -235,32 +209,32 @@ section {
   max-width: 1150px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
 .service-card {
   background: white;
+  padding: 35px 25px;
   border-radius: 14px;
-  padding: 38px 25px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0,0,0,.06);
   transition: .3s;
 }
 
 .service-card:hover {
-  transform: translateY(-7px);
+  transform: translateY(-6px);
   box-shadow: 0 12px 25px rgba(0,0,0,.12);
 }
 
 .service-icon {
-  font-size: 48px;
-  margin-bottom: 15px;
+  font-size: 45px;
+  margin-bottom: 12px;
 }
 
 .service-card h3 {
-  font-size: 23px;
   color: var(--purple);
+  font-size: 23px;
   margin-bottom: 12px;
 }
 
@@ -270,20 +244,16 @@ section {
 
 /* GALLERY */
 
-.gallery {
-  background: var(--cream);
-}
-
 .gallery-grid {
   max-width: 1150px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
 
 .gallery-item {
-  min-height: 240px;
+  min-height: 230px;
   background: #e9dfd3;
   border: 2px dashed #bca994;
   border-radius: 12px;
@@ -295,18 +265,14 @@ section {
   color: var(--brown);
 }
 
-.gallery-item span {
-  font-size: 17px;
-}
-
-/* CREATIVE MESSAGE */
+/* PERSONAL MESSAGE */
 
 .creative {
   background: #e8dfd9;
   text-align: center;
 }
 
-.creative-content {
+.creative-inner {
   max-width: 800px;
   margin: auto;
 }
@@ -330,7 +296,7 @@ section {
 }
 
 .contact h2 {
-  font-size: clamp(30px,5vw,42px);
+  font-size: clamp(30px, 5vw, 42px);
   margin-bottom: 15px;
 }
 
@@ -357,23 +323,19 @@ footer {
   padding: 30px 15px;
 }
 
-footer p {
-  font-size: 14px;
-}
-
 .footer-brand {
   color: #e5c18a;
-  font-size: 19px;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 
 /* MOBILE */
 
-@media(max-width:800px) {
+@media(max-width: 800px) {
 
   .nav-container {
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
   }
 
   nav {
@@ -386,23 +348,8 @@ footer p {
     font-size: 14px;
   }
 
-  .hero {
-    min-height: 650px;
-    background-position: center center;
-    padding: 45px 16px;
-  }
-
-  .hero-content {
-    padding: 25px 18px;
-  }
-
-  .hero-logo {
-    width: 85px;
-    height: 85px;
-  }
-
-  .hero p {
-    font-size: 17px;
+  .hero-banner {
+    aspect-ratio: 16 / 9;
   }
 
   .service-grid,
@@ -411,23 +358,22 @@ footer p {
     max-width: 500px;
   }
 
-  section {
-    padding: 60px 6%;
+  section.content-section {
+    padding: 55px 6%;
+  }
+
+  .intro {
+    padding: 50px 20px 60px;
   }
 }
 
-@media(max-width:380px) {
+@media(max-width: 380px) {
   .brand-name {
     font-size: 18px;
   }
 
   nav {
     gap: 10px 14px;
-  }
-
-  .hero h2 {
-    font-size: 16px;
-    letter-spacing: 3px;
   }
 }
 
@@ -443,7 +389,7 @@ footer p {
 
       <img
         src="Messenger_creation_CD16D08C-5580-43B2-86DC-66B857EF6F4E.jpeg"
-        alt="Free Spirit Design Studio Logo">
+        alt="Free Spirit Logo">
 
       <span class="brand-name">
         Free Spirit<br>Design Studio
@@ -464,49 +410,49 @@ footer p {
 
 <main>
 
-<!-- HERO -->
+<!-- ORIGINAL BRAND BANNER -->
 
-<section class="hero" id="home">
+<div class="hero-banner" id="home">
 
-  <div class="hero-content">
+  <img
+    src="Messenger_creation_40139868-354A-421B-B655-E9F9D3C932FE.jpeg"
+    alt="Free Spirit Design Studio sewing and creative studio banner">
 
-    <img
-      class="hero-logo"
-      src="Messenger_creation_CD16D08C-5580-43B2-86DC-66B857EF6F4E.jpeg"
-      alt="Free Spirit Design Studio">
+</div>
 
-    <h1>Free Spirit</h1>
+<!-- INTRODUCTION -->
 
-    <h2>Design Studio</h2>
+<div class="intro">
 
-    <p>
-      Expert Alterations, Handcrafted Keepsakes
-      & Custom Costuming for Dance & Theater
-    </p>
+  <h1>Welcome to Free Spirit</h1>
 
-    <a href="#services" class="button">
-      Discover What I Create
-    </a>
+  <h2>Design Studio</h2>
 
-  </div>
+  <div class="divider"></div>
 
-</section>
+  <p>
+    Creativity, craftsmanship and a personal touch.
+    Beautiful alterations, handcrafted keepsakes and
+    custom creations made with care.
+  </p>
+
+  <a href="#services" class="button">
+    Explore My Services
+  </a>
+
+</div>
 
 <!-- ABOUT -->
 
-<section id="about">
+<section class="content-section" id="about">
 
   <div class="section-title">
-
-    <h2>Welcome to Free Spirit</h2>
-
+    <h2>A Little About My Studio</h2>
     <div class="divider"></div>
-
-    <p>Creativity, craftsmanship and a personal touch.</p>
-
+    <p>Where imagination meets craftsmanship.</p>
   </div>
 
-  <div class="about-container">
+  <div class="about">
 
     <p>
       Welcome to Free Spirit Design Studio, where creativity
@@ -518,12 +464,12 @@ footer p {
     <p>
       Whether it's clothing alterations, a handcrafted
       keepsake or a custom costume for a special performance,
-      each project receives personal attention and care.
+      every project receives personal attention and care.
     </p>
 
     <p>
       My passion is creating beautiful, meaningful and
-      one-of-a-kind pieces that are made just for you.
+      one-of-a-kind pieces made just for you.
     </p>
 
   </div>
@@ -532,16 +478,12 @@ footer p {
 
 <!-- SERVICES -->
 
-<section class="services" id="services">
+<section class="content-section services" id="services">
 
   <div class="section-title">
-
     <h2>What I Do</h2>
-
     <div class="divider"></div>
-
     <p>Thoughtful craftsmanship for every occasion.</p>
-
   </div>
 
   <div class="service-grid">
@@ -594,16 +536,12 @@ footer p {
 
 <!-- GALLERY -->
 
-<section class="gallery" id="gallery">
+<section class="content-section" id="gallery">
 
   <div class="section-title">
-
     <h2>Made with Creativity</h2>
-
     <div class="divider"></div>
-
     <p>A look at the imagination behind every creation.</p>
-
   </div>
 
   <div class="gallery-grid">
@@ -638,9 +576,9 @@ footer p {
 
 <!-- CREATIVE MESSAGE -->
 
-<section class="creative">
+<section class="content-section creative">
 
-  <div class="creative-content">
+  <div class="creative-inner">
 
     <h2>Every Creation Tells a Story</h2>
 
@@ -658,7 +596,7 @@ footer p {
 
 <!-- CONTACT -->
 
-<section class="contact" id="contact">
+<section class="content-section contact" id="contact">
 
   <h2>Let's Create Something Beautiful</h2>
 
