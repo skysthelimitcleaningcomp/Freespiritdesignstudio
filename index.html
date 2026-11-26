@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Spirit Design Studio | Alterations, Keepsakes & Custom Costumes</title>
+
+<meta name="description" content="Free Spirit Design Studio offers expert clothing alterations, handcrafted keepsakes, and custom costuming for dance and theater.">
+
+<style>
+:root {
+  --cream: #faf6ed;
+  --purple: #66506f;
+  --teal: #397b78;
+  --gold: #c49a50;
+  --brown: #754a38;
+  --dark: #302c2a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+}
+
+header {
+  background: rgba(250,246,237,.97);
+  padding: 12px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px #00000012;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.brand-name {
+  color: var(--brown);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+nav a:hover {
+  color: var(--teal);
+}
+
+.hero {
+  min-height: 510px;
+  background:
+    linear-gradient(#28221d22,#28221d55),
+    url("banner.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.hero-content {
+  background: #faf6edeb;
+  padding: 38px 45px;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 10px 35px #00000020;
+}
+
+.hero h1 {
+  color: var(--brown);
+  font-size: clamp(38px, 6vw, 64px);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.hero h2 {
+  color: var(--teal);
+  font-size: 19px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  background: var(--teal);
+  color: white;
+  padding: 13px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: .25s;
+}
+
+.button:hover {
+  background: var(--purple);
+  transform: translateY(-2px);
+}
+
+section {
+  padding: 75px 7%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title h2 {
+  color: var(--brown);
+  font-size: 36px;
+}
+
+.section-title p {
+  color: #777;
+  margin-top: 8px;
+}
+
+.divider {
+  width: 75px;
+  height: 3px;
+  background: var(--gold);
+  margin: 15px auto;
+}
+
+.about {
+  text-align: center;
+  max-width: 850px;
+  margin: auto;
+}
+
+.about p {
+  font-size: 18px;
+}
+
+.services {
+  background: #eee7df;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1150px;
+  margin: auto;
+}
+
+.service-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 20px #0000000d;
+  transition: .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  color: var(--purple);
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: #666;
+}
+
+.gallery {
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.gallery-placeholder {
+  min-height: 220px;
+  background: #e9dfd3;
+  border: 1px dashed #b5a18d;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: var(--brown);
+}
+
+.contact {
+  background: var(--purple);
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  font-size: 18px;
+}
+
+.contact .button {
+  background: var(--gold);
+  color: #302c2a;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #292523;
+  color: #eee;
+  font-size: 14px;
+}
+
+@media(max-width: 750px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  nav {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .service-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="logo.jpg" alt="Free Spirit Design Studio Logo">
+    <div class="brand-name">Free Spirit<br>Design Studio</div>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Free Spirit</h1>
+    <h2>Design Studio</h2>
+    <p>
+      Expert Alterations, Handcrafted Keepsakes
+      & Custom Costuming for Dance & Theater
+    </p>
+    <a href="#services" class="button">Explore My Services</a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <h2>A Little About My Studio</h2>
+    <div class="divider"></div>
+    <p>Creativity, craftsmanship and a little free spirit.</p>
+  </div>
+
+  <div class="about">
+    <p>
+      Welcome to Free Spirit Design Studio, where creativity
+      meets craftsmanship. From thoughtful clothing alterations
+      to one-of-a-kind handmade keepsakes and custom performance
+      costumes, every project receives personal attention and care.
+    </p>
+    <p style="margin-top:18px">
+      My goal is to bring your ideas to life through quality
+      workmanship, attention to detail, and a passion for creating
+      something truly special.
+    </p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-title">
+    <h2>What I Create</h2>
+    <div class="divider"></div>
+    <p>Three specialties. Endless possibilities.</p>
+  </div>
+
+  <div class="service-grid">
+
+    <div class="service-card">
+      <div class="service-icon">🧵</div>
+      <h3>Expert Alterations</h3>
+      <p>
+        Professional clothing alterations, repairs,
+        adjustments and custom fitting to help your
+        favorite pieces fit just right.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🎁</div>
+      <h3>Handcrafted Keepsakes</h3>
+      <p>
+        Unique handmade creations, personalized gifts
+        and meaningful keepsakes made with creativity
+        and attention to detail.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🎭</div>
+      <h3>Custom Costuming</h3>
+      <p>
+        Custom-designed and crafted costumes for
+        dance, theater, performances and special
+        creative projects.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="section-title">
+    <h2>The Creative Gallery</h2>
+    <div class="divider"></div>
+    <p>A showcase of handmade work and creative projects.</p>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-placeholder">
+      Add alteration project photos here
+    </div>
+
+    <div class="gallery-placeholder">
+      Add handcrafted keepsake photos here
+    </div>
+
+    <div class="gallery-placeholder">
+      Add custom costume photos here
+    </div>
+  </div>
+
+  <p style="margin-top:25px;color:#777">
+    More creations coming soon!
+  </p>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Let's Create Something Beautiful</h2>
+  <p>
+    Have an idea, need an alteration, or looking
+    for a custom creation?
+  </p>
+  <p>I'd love to hear from you!</p>
+
+  <a href="mailto:YOUR-EMAIL-HERE" class="button">
+    Get In Touch
+  </a>
+</section>
+
+</main>
+
+<footer>
+  <p>© 2026 Free Spirit Design Studio. All Rights Reserved.</p>
+  <p>Made with creativity and a little free spirit.</p>
+</footer>
+
+</body>
+</html>
